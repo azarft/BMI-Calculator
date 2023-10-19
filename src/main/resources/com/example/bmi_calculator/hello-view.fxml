@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="436.0" style="-fx-background-color: 005B41;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmi_calculator.HelloController">
+   <children>
+      <TextField fx:id="inputWeight" layoutX="153.0" layoutY="89.0" prefHeight="32.0" prefWidth="239.0" style="-fx-background-color: #9DD68E;" stylesheets="@styles.css" />
+      <TextField fx:id="inputHeight" layoutX="153.0" layoutY="140.0" prefHeight="32.0" prefWidth="239.0" style="-fx-background-color: #9DD68E;" stylesheets="@styles.css" />
+      <Text layoutX="80.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight(kg)" textAlignment="CENTER" wrappingWidth="61.13671875" />
+      <Text layoutX="80.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height(m)" textAlignment="CENTER" wrappingWidth="61.13671875" />
+      <RadioButton fx:id="unitEnglish" layoutX="189.0" layoutY="203.0" mnemonicParsing="false" style="-fx-text-fill: #005B41; -fx-region-background: #005B41;" text="English">
+         <toggleGroup>
+            <ToggleGroup fx:id="fun" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="unitMetric" layoutX="259.0" layoutY="203.0" mnemonicParsing="false" style="-fx-text-fill: #005B41;" stylesheets="@styles.css" text="Metric" toggleGroup="$fun" />
+      <Text layoutX="56.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose unit" textAlignment="CENTER" wrappingWidth="122.283203125" />
+      <Button layoutX="85.0" layoutY="243.0" mnemonicParsing="false" onAction="#onButtonCalculateClick" prefHeight="25.0" prefWidth="154.0" stylesheets="@styles.css" text="Calculate" />
+      <Label fx:id="label" layoutX="85.0" layoutY="286.0" prefHeight="17.0" prefWidth="94.0" />
+      <Button layoutX="248.0" layoutY="243.0" mnemonicParsing="false" onAction="#onButtonClearClick" prefHeight="25.0" prefWidth="144.0" style="-fx-border-color: #005B41; -fx-background-color: none;" text="Clear" />
+   </children>
+</AnchorPane>
